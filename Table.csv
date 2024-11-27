@@ -1,0 +1,11 @@
+﻿ID,Category,Description
+1,Introductery material,Assumptions have not been clearly stated.
+2,"Structure, Presentation, Layout",There should be some tabular presentation of results
+3,"Structure, Presentation, Layout",Graphs or graphical presentation have/has not been used as expected.
+4,"Structure, Presentation, Layout",The analysis of the results is too trivial in nature and a more detailed analysis was necessary 
+5,"Structure, Presentation, Layout","Too much has been read into the results and sweeping conclusions have been made, which are not fully justified."
+6,"Structure, Presentation, Layout","Statistical analysis aspects are flawed, e.g. they are incorrect, incomplete or inappropriately applied"
+7,Introductery material,There is insufficient discussion of results and it has been wrongly assumed that they speak for themselves.
+8,"Structure, Presentation, Layout",Anomalies are present in results which have not been properly discussed or commented upon.
+9,"Structure, Presentation, Layout",Presentation of results involves excessive repetition and an appendix should have been used for the bulk of the material
+10,"Structure, Presentation, Layout","Irrelevant material has been included, which does not serve to enhance the presentation of results and/or related analysis."

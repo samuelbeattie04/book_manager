@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block page_content %}
+<div class="jumbotron text-center">
+    <h1>Welcome to the Book Library</h1>
+    <p><a href="{{ url_for('books.add_book') }}" class="btn btn-primary">Add a New Book</a></p>
+    <p><a href="{{ url_for('books.view_books') }}" class="btn btn-info">View Books</a></p>
+</div>
+{% endblock %}

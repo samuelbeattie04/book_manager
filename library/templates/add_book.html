@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <title>Add Book</title>
+</head>
+<body>
+    <h1>Add New Book</h1>
+    <form action="/books/add" method="post">
+        <label for="title">Book Title:</label>
+        <input type="text" name="title" id="title" required>
+        <br>
+        <label for="author">Author:</label>
+        <input type="text" name="author" id="author" required>
+        <br>
+        <label for="genre">Genre:</label>
+        <input type="text" name="genre" id="genre" required>
+        <br>
+        <label for="publish_date">Publish Date:</label>
+        <input type="date" name="publish_date" id="publish_date">
+        <br>
+        <button type="submit">Add Book</button>
+    </form>
+</body>
+</html>
