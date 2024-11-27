@@ -14,23 +14,27 @@ def add_book():
     if request.method == "POST":
         title = request.form.get("title")
         author = request.form.get("author")
+        # TODO you'll need to get "publish_date" from the form and then extract the year from the date string
         year = request.form.get("year")
         new_book = Book(title=title, author=author, year=int(year))
         db.session.add(new_book)
         db.session.commit()
         return redirect(url_for("books.view_books"))
     return render_template("add_book.html")
+
 #GUI Query2
 @books_bp.route("/")
 def view_books():
     books_list = Book.query.all()
     return render_template("view_all_books.html", books=books_list)
+
 #GUI Query3
 @books_bp.route("/books/filter", methods=["GET"])
 def filter_books_by_genre():
     genre = request.args.get("genre")
     books_list = Book.query.filter_by(genre=genre).all()
     return render_template("filter_books.html", books=books_list, filter_genre=genre)
+
 #GUI Query4
 @books_bp.route("/books/sort", methods=["GET"])
 def sort_books_by_title():
@@ -40,6 +44,7 @@ def sort_books_by_title():
     else:
         books_list = Book.query.order_by(Book.title.asc()).all()
         return render_template("sort_books.html", books=books_list, order=order)
+
 #GUI Query5
 @books_bp.route("/books/edit/<int:id>", methods=["GET", "POST"])
 def edit_book(id):
@@ -52,6 +57,7 @@ def edit_book(id):
         db.session.commit()
         return render_template("view_all_books.html", books=Book.query.all(), message="Book␣updated␣successfully!")
     return render_template("edit_book.html", book=book)
+
 #GUI Query6
 @books_bp.route("/books/delete/<int:id>", methods=["POST"])
 def delete_book(id):
